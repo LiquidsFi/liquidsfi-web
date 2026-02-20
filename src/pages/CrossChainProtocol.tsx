@@ -1,0 +1,88 @@
+import Features from "@/components/Features";
+import { Button } from "@/components/ui/button";
+import { CROSS_CHAIN_METRICS } from "@/lib/constants";
+
+function CrossChainProtocol() {
+	return (
+		<>
+			<Features />
+
+			<div className="bg-[#040404] pt-30 pb-30">
+				<div className="mx-auto w-full max-w-300 space-y-14 px-5">
+					<div className="mx-auto max-w-300 space-y-8 text-center text-[#E5E5EA]">
+						<p className="bg-[#081D2D] rounded-[64px] py-3 px-6 flex items-center gap-4 w-fit mx-auto text-[#BC94FE] uppercase font-bold text-base">
+							Messaging
+						</p>
+						<h2 className="text-[32px] font-extrabold md:text-[44px] bg-linear-to-b from-[#4DFFDF] to-[#4DA1FF] bg-clip-text text-white font-syne">
+							Cross-Chain Interoperability Protocol
+						</h2>
+						<p className="mx-auto max-w-210.5 font-light md:text-[20px] ">
+							Send arbitrary messages across chains. Smart contracts on one
+							blockchain react instantly to events on another, with no
+							intermediaries.
+						</p>
+					</div>
+
+					<div className="flex gap-4 justify-center flex-wrap">
+						<Button
+							className="cursor-pointer bg-linear-to-b from-[#4DFFDF] to-[#4DA1FF] text-[#000B09]"
+							// onClick={() => {
+							// 	window.open(
+							// 		"https://explorer.liquids.fi/",
+							// 		"_blank",
+							// 		"noopener,noreferrer",
+							// 	);
+							// }}
+							variant="secondary"
+							size="lg"
+						>
+							Get Started
+						</Button>
+					</div>
+
+					<div className="mx-auto grid grid-cols-1 gap-4 pt-10 sm:grid-cols-2 w-full">
+						<div className="rounded-xl p-8 bg-[#04131F] space-y-6">
+							<p className="text-[#BC94FE] text-[20px] font-bold font-syne">
+								Bidirectional
+							</p>
+
+							<p className="text-[#E5E5EA]">
+								Transmits arbitrary messages freely between EVM and Soroban
+								networks.
+							</p>
+						</div>
+
+						<div className="rounded-xl p-8 bg-[#04131F] space-y-6">
+							<p className="text-[#BC94FE] font-syne text-[20px] font-bold">
+								Verified
+							</p>
+
+							<p className="text-[#E5E5EA]">
+								Decentralized validators ensure every message reaches its
+								destination.
+							</p>
+						</div>
+					</div>
+
+					<div className="grid grid-cols-2 gap-1 md:grid-cols-4 pt-10 [@media(max-width:379px)]:grid-cols-1">
+						{CROSS_CHAIN_METRICS.map((metric, i) => (
+							<div
+								key={i}
+								className={`flex flex-col justify-center rounded-xl text-[#000B09] bg-[#8A8AFF] px-5 py-10 [@media(max-width:379px)]:items-center`}
+							>
+								<div className="text-[15px] lg:text-[24px] font-medium text-center">
+									{metric.title}
+								</div>
+								<div className="font-bold font-syne text-[64px] text-center">
+									{metric.count}
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</>
+	);
+}
+
+export default CrossChainProtocol;

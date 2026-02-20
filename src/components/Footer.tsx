@@ -1,8 +1,3 @@
-// import { FOOTER_LINKS } from "@/lib/constants";
-// import { Link } from "react-router";
-// import { Fragment } from "react";
-// import ExploreButtons from "./ExploreButtons";
-
 import Logo from "./Logo";
 
 function Footer() {

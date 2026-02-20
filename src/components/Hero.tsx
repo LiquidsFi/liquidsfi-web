@@ -18,7 +18,7 @@ function Hero() {
 						</p>
 					</div>
 
-					<div className="flex gap-4 justify-center">
+					<div className="flex gap-4 justify-center flex-wrap">
 						<Button
 							className="cursor-pointer bg-[#2DD4BF] hover:bg-[#2DD4BF]/90 text-base text-[#000B09]"
 							// onClick={() => {

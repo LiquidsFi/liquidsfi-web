@@ -16,7 +16,7 @@ function SupportedChains() {
 							key={i}
 							className="bg-[#04101A] rounded-[64px] py-3 px-6 flex items-center gap-4"
 						>
-							<img src={chain.icon} alt="" />
+							<img src={chain.icon} alt="" className="w-10 h-auto" />
 
 							<span className="text-[#E5E5EA] text-[24px]">{chain.title}</span>
 						</div>

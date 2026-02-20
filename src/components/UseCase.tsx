@@ -6,7 +6,7 @@ import {
 
 function UseCase() {
 	return (
-		<div className="bg-[#040404]">
+		<div className="bg-[#040404]" id="use-cases">
 			<div className="mx-auto w-full max-w-300 space-y-8 px-5 py-10 md:py-26">
 				<div className="mx-auto max-w-300 space-y-8 text-center text-[#E5E5EA]">
 					<div className="bg-[#04101A] rounded-[64px] py-3 px-6 flex items-center gap-4 w-fit mx-auto">
