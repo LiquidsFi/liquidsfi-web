@@ -7,7 +7,25 @@ import { useState } from "react";
 import { RxChevronDown, RxChevronUp } from "react-icons/rx";
 import { Link, useLocation } from "react-router";
 
-function MobileLinks({ link, setSheetIsOpen }) {
+interface NavChild {
+	icon: string;
+	title: string;
+	href: string;
+	description?: string;
+}
+
+interface NavLink {
+	title: string;
+	href?: string;
+	children?: NavChild[];
+}
+
+interface MobileLinksProps {
+	link: NavLink;
+	setSheetIsOpen: (open: boolean) => void;
+}
+
+function MobileLinks({ link, setSheetIsOpen }: MobileLinksProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const location = useLocation();
 	const pathname = location.pathname.split("/");
